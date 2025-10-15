@@ -1,0 +1,26 @@
+conditioning:
+  method:  ps_conv #ps_roi_deconv_patch_various_mask # ps_conv
+  params:
+    scale: 1.0
+    diff_scale: 1.0
+    deconv_scale: 1.0
+    kernel_size: 256
+    exp_task: lensless_real_voronoi_waller_dps
+
+    skip_point : 500
+
+    YS : 0
+
+data:
+  name: lensless_real_waller #ffhq #lensless_ys_admm
+  root: /data3/lensless_data/diffuser_v1_100 #/data3/lensless_data/ys_v3_dj_sample_0/
+
+measurement:
+  operator:
+    name: lensless_flicker
+    kernel_size: 256
+    intensity: 0.5
+
+  noise: 
+    name: gaussian
+    sigma: 0.002
