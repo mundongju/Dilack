@@ -1,0 +1,14 @@
+# DDPM sampler configuration (shared by every task).
+# Matches the DPS / guided-diffusion setup the pretrained priors were trained
+# with. The checkpoints have learn_sigma=True (6-channel output); p_mean_variance
+# splits the output and the fixed_small variance processor uses the analytic
+# posterior variance, so this is consistent with both imagenet256 and ffhq_10m.
+sampler: ddpm
+steps: 1000
+noise_schedule: linear
+model_mean_type: epsilon
+model_var_type: fixed_small
+dynamic_threshold: False
+clip_denoised: True
+rescale_timesteps: False
+timestep_respacing: ""

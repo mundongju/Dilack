@@ -544,7 +544,7 @@ def plot_ADMM(psf, raw, result, times, hyperparameters, clamp_=0.1, total_time=0
     
     # Display relevant information as title
     if total_time and iteration is not None:
-        fig.suptitle('{} Iteration Elapsed: {:.2} ms (total {:3.3} ms), \n $\mu_1$:{:.2e}, $\mu_2$:{:.2e}, $\mu_3$:{:.2e}, $\ttau$:{:.2e}'.format(
+        fig.suptitle('{} Iteration Elapsed: {:.2} ms (total {:3.3} ms), \n $\\mu_1$:{:.2e}, $\\mu_2$:{:.2e}, $\\mu_3$:{:.2e}, $\\tau$:{:.2e}'.format(
             iteration,
             times * 1e3,
             total_time * 1e3,
@@ -554,7 +554,7 @@ def plot_ADMM(psf, raw, result, times, hyperparameters, clamp_=0.1, total_time=0
             hyperparameters['tau'][0]), fontsize=25)
     else:
         fig.suptitle(
-            'Total Elapsed (+ displaying): {:3.3} s, \n $\mu_1$:{:.2e}, $\mu_2$:{:.2e}, $\mu_3$:{:.2e}, $\ttau$:{:.2e}'.format(
+            'Total Elapsed (+ displaying): {:3.3} s, \n $\\mu_1$:{:.2e}, $\\mu_2$:{:.2e}, $\\mu_3$:{:.2e}, $\\tau$:{:.2e}'.format(
                 times + time.time() - display_time,
                 hyperparameters['mu1'][0],
                 hyperparameters['mu2'][0],

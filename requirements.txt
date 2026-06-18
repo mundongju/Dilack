@@ -8,8 +8,10 @@ tqdm
 matplotlib
 Pillow
 opencv-python
+packaging
 
 # Metrics
+scikit-image
 pytorch-msssim
 pytorch-fid-wrapper
 lpips

@@ -65,7 +65,12 @@ class ConditioningMethod(ABC):
             pad_size = 128
             x_0_hat_pad = F.pad(x_0_hat,(pad_size,pad_size,pad_size,pad_size), mode='constant', value=-1) # # [1,3,256,256] =>[1,3,512,512]
             b = self.operator.forward(x_0_hat_pad,kernel_size=512, **kwargs)[0]
-            b = crop_and_noise_2(b,450,0) 
+            b = crop_and_noise_2(b,450,0)
+            # NOTE: `difference` was undefined here (NameError). This generic
+            # grad_and_value path is NOT used by Dilack (ps_dilack) or the DPS
+            # baseline (ps_conv) -- those call grad_and_value_dilack /
+            # grad_and_value_conv. Defined to avoid the crash for ps/ps+/mcg.
+            difference = a - b
             norm = torch.linalg.norm(difference)
             norm_grad = torch.autograd.grad(outputs=norm, inputs=x_prev)[0] # [1,3,256,256]
 
