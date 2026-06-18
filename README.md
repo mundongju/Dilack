@@ -27,10 +27,12 @@ Seoul National University, Republic of Korea<br>
 ## Results
 
 <div align="center">
-<img src="assets/Dilack_results.png" alt="Qualitative results on synthetic and real lensless imaging" width="92%">
+<img src="assets/Dilack_results.png" alt="Qualitative results on FFHQ lensless imaging (Voronoi / Turing PSF)" width="90%">
+
+<em>Qualitative results of our zero-shot diffusion model, Dilack, on FFHQ.</em>
 </div>
 
-Across synthetic (lensless / severe motion deblur) and real (MirFlickr-lensless, DiffuserCam) measurements, Dilack recovers structure and fine detail where existing zero-shot diffusion methods collapse. Full quantitative tables are in the [paper](https://doi.org/10.1016/j.imavis.2025.105786).
+On lensless imaging with Voronoi- and Turing-pattern masks, Dilack faithfully reconstructs faces from severely scrambled measurements where prior zero-shot diffusion solvers (DPS, DiffPIR, DDPG, DSG, LDPS, ReSample) diverge or hallucinate. Full quantitative tables are in the [paper](https://doi.org/10.1016/j.imavis.2025.105786).
 
 ---
 
