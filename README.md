@@ -105,7 +105,9 @@ wget -O models/imagenet256.pt \
 
 ## Datasets
 
-**Synthetic (ImageNet / FFHQ).** ~1,000 validation images per dataset at 256×256, following the DPS protocol. The synthetic Voronoi / Turing PSFs are shipped with the repo.
+**Synthetic (ImageNet / FFHQ).** ~1,000 validation images per dataset at 256×256, following the DPS protocol. The synthetic Voronoi / Turing PSFs are shipped with the repo. Download `lensless_data.zip`,mkdir `samples/lensless_data/` and unzip it into `samples/lensless_data/`:
+
+> 📦 **Download:** `lensless_data.zip` — [Google Drive](https://drive.google.com/file/d/1NA8vLNTacP3j_9qW1u2fI6xB-bonoTIf/view?usp=sharing)
 
 ```
 samples/dps_val/imagenet/   *.JPEG
@@ -114,10 +116,10 @@ samples/lensless_data/ys_v4/psf_voronoi.png
 samples/lensless_data/ys_v2_dj_turing/psf/psf_turing.png
 ```
 
-**Real 1 — mask-based lensless camera (MirFlickr).** 100 [MirFlickr](https://press.liacs.nl/mirflickr/) images displayed on a monitor and captured through our custom Voronoi-PSF lensless system (working distance ≈ 20 cm). Download `ys_flicker_100.zip` and unzip it into `samples/dps_val/ys_flickr_100/`:
 
-> 📦 **Download:** `ys_flicker_100.zip` — [Google Drive](https://drive.google.com/file/d/REPLACE_WITH_YOUR_FILE_ID/view?usp=sharing)
-> *(placeholder — replace `REPLACE_WITH_YOUR_FILE_ID` with the share link of your uploaded archive; see the upload steps below.)*
+**Real 1 — mask-based lensless camera (MirFlickr).** 100 [MirFlickr](https://press.liacs.nl/mirflickr/) images displayed on a monitor and captured through our custom Voronoi-PSF lensless system (working distance ≈ 20 cm). Download `ys_flicker_100.zip`,mkdir `samples/dps_val/` and unzip it into `samples/dps_val/ys_flickr_100/`:
+
+> 📦 **Download:** `ys_flicker_100.zip` — [Google Drive](https://drive.google.com/file/d/1d2R4I-tP2rL4Ndqx67eBYPoeoaOra8uK/view?usp=sharing)
 
 ```
 samples/dps_val/ys_flickr_100/
