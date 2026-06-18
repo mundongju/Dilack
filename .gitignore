@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Pretrained diffusion checkpoints (download separately, see README)
+models/*.pt
+
+# Outputs / logs
+results/
+temp_demo/
+*.log
+
+# Large datasets (download separately, see README)
+samples/dps_val/imagenet/
+samples/dps_val/ffhq/
+samples/dps_val/ys_flickr_100/
+samples/dps_val/diffusercam_100/
+samples/lensless_data/ys_v1/
+
+# OS
+.DS_Store

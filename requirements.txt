@@ -1,0 +1,18 @@
+# Core
+torch>=1.12
+torchvision>=0.13
+numpy
+scipy
+pyyaml
+tqdm
+matplotlib
+Pillow
+opencv-python
+
+# Metrics
+pytorch-msssim
+pytorch-fid-wrapper
+lpips
+
+# Misc
+ipython

@@ -1,0 +1,25 @@
+# Dilack on the real SNU/Yonsei Voronoi lensless data (MirFlickr captures).
+conditioning:
+  method: ps_dilack
+  params:
+    scale: 1.0
+    deconv_scale: 1.0
+    kernel_size: 256
+    exp_task: lensless_real_ys_dilack
+    threshold_init: 0.3
+    patch_size: 32
+    skip_point: 500
+    YS: 1
+
+data:
+  name: lensless_ys
+  root: ./samples/dps_val/ys_flickr_100
+
+measurement:
+  operator:
+    name: lensless_real_ys
+    kernel_size: 256
+    intensity: 0.5
+  noise:
+    name: gaussian
+    sigma: 0.002
