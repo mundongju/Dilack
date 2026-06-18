@@ -1,0 +1,23 @@
+# DPS (vanilla posterior sampling) baseline on severe motion deblurring (ImageNet).
+conditioning:
+  method: ps_conv
+  params:
+    scale: 1.0
+    diff_scale: 1.0
+    deconv_scale: 1.0
+    kernel_size: 256
+    exp_task: motion_deblur_imagenet_dps
+    YS: 0
+
+data:
+  name: imagenet
+  root: ./samples/dps_val/imagenet
+
+measurement:
+  operator:
+    name: motion_blur
+    kernel_size: 256
+    intensity: 1.0
+  noise:
+    name: gaussian
+    sigma: 0.0005
