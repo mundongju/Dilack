@@ -8,7 +8,7 @@
 Seoul National University, Republic of Korea<br>
 <sup>\*</sup>Equal contribution &nbsp;·&nbsp; <sup>†</sup>Corresponding authors (`seungahlee@snu.ac.kr`, `sychun@snu.ac.kr`)
 
-[![Paper](https://img.shields.io/badge/Paper-IVC%202025-b31b1b.svg)](https://doi.org/10.1016/j.imavis.2025.105786)
+[![Paper](https://img.shields.io/badge/Paper-IMAVIS%202025-b31b1b.svg)](https://doi.org/10.1016/j.imavis.2025.105786)
 [![GitHub](https://img.shields.io/badge/GitHub-Dilack-181717.svg?logo=github)](https://github.com/mundongju/Dilack)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
