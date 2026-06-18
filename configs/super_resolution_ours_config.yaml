@@ -1,0 +1,27 @@
+conditioning:
+  method:  ps_roi_deconv_patch_kl_stochastic_sr #ps_roi_deconv_patch_various_mask # ps_conv
+  params:
+    scale: 1.0
+    diff_scale: 1.0
+    deconv_scale: 1.0
+    kernel_size: 256
+    exp_task: dilack_sr
+
+    threshold_init: 0.2 #0.75
+    patch_size: 32
+    loss_mode: 59
+    skip_point : 500
+
+data:
+  name: ffhq
+  root: ./samples/dps_val/ffhq
+
+measurement:
+  operator:
+    name: super_resolution #sr_fft_ys #super_resolution_fft
+    in_shape: !!python/tuple [1, 3, 256, 256]
+    scale_factor: 4
+  
+  noise: 
+    name: gaussian
+    sigma: 0.05

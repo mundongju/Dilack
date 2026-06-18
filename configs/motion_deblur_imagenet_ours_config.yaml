@@ -1,0 +1,27 @@
+conditioning:
+  method:  ps_roi_deconv_patch_kl_stochastic #ps_roi_deconv_patch_various_mask # ps_conv
+  params:
+    scale: 1.0
+    deconv_scale: 1.0
+    kernel_size: 256
+    exp_task: motion_deblur_imagenet_dilack
+
+    threshold_init: 0.2 #0.75
+    patch_size: 32
+    skip_point : 500
+
+    YS : 0
+
+data:
+  name: imagenet #ffhq
+  root: ./samples/dps_val/imagenet #./data/samples/
+  
+measurement:
+  operator:
+    name: motion_blur
+    kernel_size: 256 #61
+    intensity: 1.0 #0.5
+
+  noise: 
+    name: gaussian
+    sigma: 0.0005 
